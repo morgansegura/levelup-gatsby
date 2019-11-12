@@ -3,16 +3,28 @@
  *
  * See: https://www.gatsbyjs.org/docs/gatsby-config/
  */
+const settings = require('./settings')
+
+require("dotenv").config({
+  path: `.env.${process.env.NODE_ENV}`,
+})
 
 module.exports = {
   /* Your site config here */
   siteMetadata: {
-    title: "Gatsby-Bootstrap",
-    description: "This is the description of our website",
-    keywords: "gatsby, gatsbyjs project, gatsby bootstrap",
-    image: "/static/gatsby.jpg",
-    siteUrl: "http://localhost:8000/",
-    url: "https://www.gatsbyjs.org/",
+    siteUrl: settings.url,
+    url: settings.url,
+    nicename: settings.nicename,
+    short: settings.short,
+    alias: settings.alias,
+    acronymn: settings.acronymn,
+    title: settings.title,
+    description: settings.description,
+    keywords: settings.keywords,
+    favicon: settings.favicon,
+    logo: settings.logo,
+    themeColor: settings.themeColor,
+    backgroundColor: settings.backgroundColor,
   },
   plugins: [
     {
@@ -22,13 +34,15 @@ module.exports = {
         path: `${__dirname}/src/`,
       },
     },
-    { resolve: `gatsby-transformer-remark` },
+    `gatsby-transformer-sharp` ,
+    `gatsby-plugin-sharp`,
     {
       resolve: `gatsby-source-wordpress`,
       options: {
-        baseUrl: `segura.local`,
+        baseUrl: `levelup.local`,
         protocol: `http`,
         hostingWPCOM: false,
+        // excludedRoutes: ["**/media"],
       },
     },
     `gatsby-plugin-react-helmet`,
@@ -43,11 +57,13 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `GatsbyJS Bootstrap`,
-        short_name: `GatsbyJS Bootstrap`,
+        name: settings.title,
+        short_name: settings.short,
+        description: settings.description,
+        icon: settings.icon,
         start_url: `/`,
-        background_color: `#F8F9FA`,
-        theme_color: `#FFFFFF`,
+        background_color: settings.backgroundColor,
+        theme_color: settings.themeColor,
         display: `standalone`,
       },
     },

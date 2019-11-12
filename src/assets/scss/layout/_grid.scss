@@ -1,0 +1,102 @@
+// Vars
+$grid-min: 1;
+$grid-max: 12;
+$grid-buffer: .75rem;
+
+.grid {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: auto;
+    margin-right: auto; 
+
+    @include atMedium {
+        margin-left: -$grid-buffer;
+        margin-right: -$grid-buffer;
+    }
+}
+.item {
+    display: flex;
+    flex-basis: 100%;
+    width: 100%;
+
+    @for $i from $grid-min through ($grid-max) {
+        &-#{$i} {
+            display: flex;
+            flex-basis: $i / $grid-max * 100%;
+            width: $i / $grid-max * 100%;                
+            padding-left: $grid-buffer;
+            padding-right: $grid-buffer;        
+        }       
+    }   
+    @include atSmallest {
+        @for $i from $grid-min through ($grid-max) {
+            &-xs-#{$i} {
+                display: flex;
+                flex-basis: $i / $grid-max * 100%;
+                width: $i / $grid-max * 100%;                
+                padding-left: $grid-buffer;
+                padding-right: $grid-buffer;        
+            }            
+        }
+    }
+    @include atSmall {
+        @for $i from $grid-min through ($grid-max) {
+            &-sm-#{$i} {          
+                display: flex;
+                flex-basis: $i / $grid-max * 100%;
+                width: $i / $grid-max * 100%;
+                padding-left: $grid-buffer;
+                padding-right: $grid-buffer;        
+            }  
+        }           
+    }
+    @include atMedium {
+        @for $i from $grid-min through ($grid-max) {
+            &-md-#{$i} {            
+                display: flex;
+                flex-basis: $i / $grid-max * 100%;
+                width: $i / $grid-max * 100%;
+                padding-left: $grid-buffer;
+                padding-right: $grid-buffer;
+            }   
+        }          
+    }  
+    @include atLarge {
+        @for $i from $grid-min through ($grid-max) {
+            &-lg-#{$i} {            
+                display: flex;
+                flex-basis: $i / $grid-max * 100%;
+                width: $i / $grid-max * 100%;
+                padding-left: $grid-buffer;
+                padding-right: $grid-buffer;
+            }              
+        }
+    }          
+    @include atLargest {
+        @for $i from $grid-min through ($grid-max) {
+            &-xl-#{$i} {            
+                display: flex;
+                flex-basis: $i / $grid-max * 100%;
+                width: $i / $grid-max * 100%;
+                padding-left: $grid-buffer;
+                padding-right: $grid-buffer;
+            }
+        }       
+    }
+}
+
+@include atSmallest {
+    .show--md {
+        display: none;
+    }
+} 
+@include atSmall{
+    .show--md {
+        display: none;
+    }
+} 
+@include atMedium {
+    .show--md {
+        display: block;
+    }
+}

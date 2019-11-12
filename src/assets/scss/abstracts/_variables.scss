@@ -1,0 +1,48 @@
+/* Fonts */
+$montserrat: 'Montserrat', sans-serif;
+
+/* Shades */
+
+/* Theme Colors */
+$theme-color: #781ED6;
+$theme-color-light: lighten($theme-color, 10%);
+$theme-color-lighter: lighten($theme-color, 20%);
+$theme-color-dark: darken($theme-color, 10%);
+$theme-color-darker: darken($theme-color, 20%);
+
+// Alternate theme colors
+$theme-color-network: #ff4027;
+
+/* Alt Colors */
+$grey-darker: #19181d;
+$grey-dark: #383d40;
+$grey-mid: #727282;
+$grey-light: #f8f8f8;
+$grey-lighter: #f1f1f1;
+
+/* DIMENSIONS
+    Extra small screen / phone
+    Small screen / phone
+    Medium screen / tablet
+    Large screen / desktop
+    Extra large screen / wide desktop
+    Grid Breakpoints {min-width}
+ */
+// calc($buffer * num)
+$buffer: 1rem;
+
+// Fonts
+$base-font: 'Montserrat','Helvetica Neue','Segoe UI','Helvetica','Arial',sans-serif;
+$font-sm: '.9375rem';
+
+$grid-xs: 0;
+$grid-sm: 576px;
+$grid-md: 768px;
+$grid-lg: 992px;
+$grid-xl: 1200px;
+
+// Grid Breakpoints {max-width}
+$container-sm: 540px;
+$container-md: 720px;
+$container-lg: 960px;
+$container-xl: 1140px;

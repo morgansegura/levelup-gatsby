@@ -1,0 +1,64 @@
+.wrapper {
+    width: 100%;
+    position: relative;
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;    
+}
+.container {
+    // background: violet;
+    margin-right: auto;
+    margin-left: auto;
+    width: 100%;
+    // transition: max-width .1s ease-out;
+
+    @include atSmallest {
+        padding: 0 $buffer;
+    }
+    @include atSmall {
+        max-width: $grid-md;        
+    }  
+    @include atLarge {
+        max-width: $grid-lg;      
+    }
+    @include atLargest {
+        max-width: $grid-xl;      
+    }     
+}
+
+.main {
+    display: flex;
+    flex: 1;     
+}
+.content {
+    
+    h2 {
+        font-size: 1.8rem;
+        line-height: 2;
+        font-weight: 600;
+    }
+    p {
+        font-size: 1.125rem;
+    }
+
+    a {
+        color: $theme-color;
+        text-decoration: none;
+        border-bottom: none;
+
+        &.underline {
+            border-bottom: 1px solid $theme-color;
+        }
+    }   
+    .heading {
+        text-align: center;
+        text-transform: uppercase; 
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+    }     
+    .subheading {
+        text-align: center;
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+    }        
+}

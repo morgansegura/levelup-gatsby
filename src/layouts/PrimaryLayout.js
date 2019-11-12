@@ -3,13 +3,15 @@ import Header from "../components/Header"
 import Footer from "../components/Footer"
 import SEO from "../components/SEO"
 
+import "../utils/typography"
+
 const PrimaryLayout = props => (
-  <div>
+  <div className="wrapper">
     <SEO />
     <Header />
-    <main>
+    <main className="main">
       <div className="container">
-        <div className="row justify-content-md-center">
+        <div className="content">
           <div className={props.column}>{props.children}</div>
         </div>
       </div>

@@ -1,0 +1,117 @@
+.nav {
+    ul {
+        list-style-type: none;
+    }
+}
+.nav__sites {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    // padding-top: 2rem;
+    // padding-bottom: 1rem;
+
+    .header & {
+        display: none;        
+    }
+
+    & ul {
+        // display: flex;
+        // justify-content: center;        
+    }
+
+    & li {
+        position: relative;
+        margin-right: 1rem; 
+    }
+
+    @include atMedium {
+        .header & {
+            display: block;        
+        }
+    }      
+}
+.nav__header {    
+    
+    & ul {
+        display: flex;
+        font-size: 1rem;     
+    }
+    & a {
+        color: $grey-dark;
+        text-transform: uppercase;
+        font-size: .75rem;
+        font-weight: 600;
+        transition: color .3s ease-out;
+
+        &.active,
+        &:hover {
+            color: $theme-color;
+        }
+    }
+    @include atSmallest {
+        flex-basis: 100%;
+        width: 100%;
+        padding: .75rem 0; 
+
+        & ul {
+            justify-content: space-evenly; 
+        }
+    }    
+  
+    @include atSmall {
+        flex-basis: 75%;
+        width: 75%;
+        align-self: flex-end;
+
+        & ul {
+            justify-content: flex-end;
+        }  
+        & li {
+            padding-left: 1rem;
+            padding-right: 1rem;
+        }              
+    }    
+}
+.nav__footer {    
+    display: flex;
+    justify-content: center;
+
+    & ul {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;       
+    }
+    & li {
+        padding-left: .5rem;
+        padding-right: .5rem;
+    }
+    & a {
+        color: $grey-dark;
+        text-transform: uppercase;
+        font-weight: 600;
+        transition: color .3s ease-out;
+
+        &.active,
+        &:hover {
+            color: $theme-color;
+        }        
+    }
+
+    @include atSmallest {
+        padding: .5rem 0 1rem 0;
+        & a {
+            font-size: 0.9rem;
+        }
+    }    
+  
+    @include atMedium { 
+        justify-content: flex-end;
+
+        & li {
+            padding-right: 1rem;
+        }             
+        & a {
+            font-size: 0.975rem;
+        }        
+    }    
+}

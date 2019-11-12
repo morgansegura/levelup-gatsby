@@ -1,24 +1,32 @@
 import React from "react"
-import { Navbar, Nav } from "react-bootstrap"
 import { Link } from "gatsby"
+
 export default props => (
-  <header>
-    <Navbar bg="light" expand="lg">
-      <Navbar.Brand href="/">Gatsby-Bootstrap</Navbar.Brand>
-      <Navbar.Toggle aria-controls="basic-navbar-nav" />
-      <Navbar.Collapse id="basic-navbar-nav">
-        <Nav className="mr-auto">
-          <Nav.Link as={Link} to="/">
-            <b class="text-dark">Home</b>
-          </Nav.Link>
-          <Nav.Link as={Link} to="/about">
-          <b class="text-dark">About Us</b>
-          </Nav.Link>
-          <Nav.Link as={Link} to="/contact">
-          <b class="text-dark">Contact Us</b>
-          </Nav.Link>
-        </Nav>
-      </Navbar.Collapse>
-    </Navbar>
+  <header className="header--fixed">
+    <div className="header" bg="light" expand="lg">
+      <div className="header__logo" href="/">
+        Level Up
+      </div>
+        <nav className="nav__header">
+          <ul>
+            <li>
+              <Link to="/">
+                Home
+              </Link>
+            </li>
+            <li>
+              <Link to="/about">
+                About Us
+              </Link>            
+            </li>
+            <li>
+              <Link to="/contact">
+                Contact Us
+              </Link>            
+            </li>
+          </ul>
+        </nav>
+      </div>
+
   </header>
 )

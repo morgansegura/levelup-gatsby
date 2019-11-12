@@ -1,0 +1,16 @@
+body {
+    line-height: 1.7;
+}
+p {
+    margin-bottom: 0;
+}
+a {
+    text-decoration: none;
+    transition: color .3s ease-out, 
+                opacity .3s ease-out,
+                fill .3s ease-out;
+
+    &:hover {
+        text-decoration: none;
+    }
+}

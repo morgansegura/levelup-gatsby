@@ -5,33 +5,51 @@ import Post from "../components/Post"
 
 
 export default ({ data }) => {
-  console.log(data)
+  console.log(data.site)
   return (
     <PrimaryLayout column="col-xs-6">
+      <div className="container">
       {data.allWordpressPost.nodes.map(node => (
         <Post
-          alt={node.featured_media.slug}
-          image={node.featured_media.source_url}
+          // alt={node.featured_media.slug}
+          // image={node.featured_media.source_url}
           title={node.title}
           excerpt={node.excerpt}
           readMore={node.slug}
         />
       ))}
+      </div>
     </PrimaryLayout>
   )
 }
 
 export const query = graphql`
-  {
-  allWordpressPost{
+{
+  site {
+    siteMetadata {
+      url
+      nicename
+      short
+      alias
+      acronymn
+      title
+      description
+      keywords
+      favicon
+      logo
+      themeColor
+      backgroundColor   
+    }
+  }
+  allWordpressPost {
     nodes {
       slug
       title
       excerpt
-      featured_media {
-        source_url
-        slug
-      }
+      # featured_media {
+      #   source_url
+      #   slug
+      # }
     }
   }
 }
