@@ -1,7 +1,7 @@
 import React from "react"
 import { graphql } from "gatsby"
 import PrimaryLayout from "../layouts/PrimaryLayout"
-import Post from "../components/Post"
+// import Post from "../components/Post"
 
 
 export default ({ data }) => {
@@ -9,7 +9,8 @@ export default ({ data }) => {
   return (
     <PrimaryLayout column="col-xs-6">
       <div className="container">
-      {data.allWordpressPost.nodes.map(node => (
+      pages/index.js
+      {/*data.allWordpressPost.nodes.map(node => (
         <Post
           // alt={node.featured_media.slug}
           // image={node.featured_media.source_url}
@@ -17,7 +18,7 @@ export default ({ data }) => {
           excerpt={node.excerpt}
           readMore={node.slug}
         />
-      ))}
+      ))*/}
       </div>
     </PrimaryLayout>
   )
@@ -39,17 +40,6 @@ export const query = graphql`
       logo
       themeColor
       backgroundColor   
-    }
-  }
-  allWordpressPost {
-    nodes {
-      slug
-      title
-      excerpt
-      # featured_media {
-      #   source_url
-      #   slug
-      # }
     }
   }
 }

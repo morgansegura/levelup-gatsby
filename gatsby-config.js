@@ -27,31 +27,70 @@ module.exports = {
     backgroundColor: settings.backgroundColor,
   },
   plugins: [
+    `gatsby-plugin-react-helmet`,
+    {
+      // keep as first gatsby-source-filesystem plugin for gatsby image support
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        path: `${__dirname}/static/images`,
+        name: `uploads`,
+      },
+    },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        name: `src`,
-        path: `${__dirname}/src/`,
+        path: `${__dirname}/src/pages`,
+        name: `pages`,
       },
     },
-    `gatsby-transformer-sharp`,
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        path: `${__dirname}/src/assets/images`,
+        name: `images`,
+      },
+    },
     `gatsby-plugin-sharp`,
+    `gatsby-transformer-sharp`,
+    `gatsby-plugin-robots-txt`,
     {
-      resolve: `gatsby-source-wordpress`,
+      resolve: `gatsby-transformer-remark`,
       options: {
-        baseUrl: `levelup.local`,
-        protocol: `http`,
-        hostingWPCOM: false,
-        // excludedRoutes: ["**/media"],
+        plugins: [
+          {
+            resolve: `gatsby-remark-relative-images`,
+            options: {
+              name: `uploads`,
+            },
+          },
+          {
+            resolve: `gatsby-remark-images`,
+            options: {
+              // It's important to specify the maxWidth (in pixels) of
+              // the content container as this plugin uses this as the
+              // base for generating different widths of each image.
+              maxWidth: 2048,
+            },
+          },
+          {
+            resolve: `gatsby-remark-copy-linked-files`,
+            options: {
+              destinationDir: `static`,
+            },
+          },
+        ],
       },
     },
-    `gatsby-plugin-react-helmet`,
-    "gatsby-plugin-robots-txt",
-    `gatsby-plugin-netlify`,
     {
-      resolve: "gatsby-plugin-netlify-cache",
+      resolve: `gatsby-plugin-netlify-cache`,
       options: {
-        cachePublic: true,
+        cachePublic: false,
+      },
+    },
+    {
+      resolve: `gatsby-plugin-netlify-cms`,
+      options: {
+        modulePath: `${__dirname}/src/cms/cms.js`,
       },
     },
     {
@@ -68,6 +107,6 @@ module.exports = {
       },
     },
     `gatsby-plugin-offline`,
-    `gatsby-plugin-netlify-cms`
+    `gatsby-plugin-netlify`,
   ],
 }

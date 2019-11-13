@@ -32,16 +32,25 @@ export default BlogpostLayout
 
 export const query = graphql`
   query($slug: String!) {
-    wordpressPost(slug: { eq: $slug }) {
-      content
-      title
-      # featured_media {
-      #   source_url
-      # }
-      categories {
-        name
-      }
+    # wordpressPost(slug: { eq: $slug }) {
+    #   content
+    #   title
+    #   # featured_media {
+    #   #   source_url
+    #   # }
+    #   categories {
+    #     name
+    #   }
+    #   excerpt
+    # }
+    markdownRemark {
       excerpt
-    }
+      fields {
+        slug
+      }
+      frontmatter {
+        image
+      }
+    }    
   }
 `
