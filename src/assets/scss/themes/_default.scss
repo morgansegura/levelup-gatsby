@@ -1,1 +1,31 @@
 // Colors
+
+.wrapper {
+    background-color: $grey-lighter;
+}
+.header {
+    background-color: $theme-color;
+
+    &__logo a {
+        color:white;
+    }
+}
+.nav__header {
+    & a {
+        color: white;
+
+        &.active,
+        &:hover {
+            color: rgba(white, .8);
+        }        
+    }
+}
+.card {
+    background-color: white;
+    // box-shadow: 0 2px 5px 0 rgba(0,0,0,.3);
+    // border: 1px solid rgba(black, .1);        
+}
+.footer,
+.card  {
+    background-color: white;
+}

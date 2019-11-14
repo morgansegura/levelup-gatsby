@@ -4,7 +4,8 @@ $montserrat: 'Montserrat', sans-serif;
 /* Shades */
 
 /* Theme Colors */
-$theme-color: #781ED6;
+// $theme-color: #781ED6;
+$theme-color: turquoise;
 $theme-color-light: lighten($theme-color, 10%);
 $theme-color-lighter: lighten($theme-color, 20%);
 $theme-color-dark: darken($theme-color, 10%);

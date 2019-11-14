@@ -33,6 +33,7 @@ const Navbar = class extends React.Component {
   }
 
   render() {
+    // console.log(props)
     return (
       <div className="header" bg="light" expand="lg">
         <div className="header__logo" href="/">

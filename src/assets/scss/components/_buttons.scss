@@ -25,13 +25,16 @@
         background-color: $theme-color;
 
         &:hover {
-            background-color: $theme-color;
+            background-color: lighten($theme-color, 5%);
         }
         &:active {
-            background-color: $theme-color-dark;
+            background-color: darken($theme-color, 10%);
         }        
     }
     &:active {
         // box-shadow: 0 -2px 2px rgba(0,0,0,.2);
     }
+}
+.btn__block {
+    display: flex;
 }

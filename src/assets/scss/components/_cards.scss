@@ -1,14 +1,17 @@
 // _cards.scss
 
 .card {
+    position: relative; 
     display: flex;
-    flex-direction: column;
+    flex-direction: column;      
+    z-index: 1;
     width: 100%;
-    align-items: flex-start;
-    box-shadow: 0 2px 5px 0 rgba(0,0,0,.3);
-    text-decoration: none; 
+    justify-content: flex-end;
+    text-decoration: none;
+    transition: all .3s ease-out;
 
-    &__image {        
+    &__image {     
+        background: $theme-color-network;   
         overflow: hidden;
         position: relative;
         width: 100%;
@@ -24,7 +27,8 @@
     }   
     &__content {
         position: relative;
-        flex: 10 auto;
+        display: flex;        
+        flex-direction: column;
         width: 100%;
         padding: 1.25rem;
     }
@@ -35,11 +39,21 @@
         font-weight: 700;
         padding-top: 1rem;        
     }
+    &__excerpt {
+        align-self: center;
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+    }
     &__subtitle,
     &__subheading  {
         color: $grey-dark;  
         font-weight: 400;
         padding-top: .5rem;
+        padding-bottom: .5rem;
+    }
+    &__icon {
+        align-self: flex-end;
+        // padding-right: 1.25rem;
         padding-bottom: .5rem;
     }
     &__icon--right {

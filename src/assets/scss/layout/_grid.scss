@@ -7,7 +7,7 @@ $grid-buffer: .75rem;
     display: flex;
     flex-wrap: wrap;
     margin-left: auto;
-    margin-right: auto; 
+    margin-right: auto;     
 
     @include atMedium {
         margin-left: -$grid-buffer;
@@ -25,7 +25,8 @@ $grid-buffer: .75rem;
             flex-basis: $i / $grid-max * 100%;
             width: $i / $grid-max * 100%;                
             padding-left: $grid-buffer;
-            padding-right: $grid-buffer;        
+            padding-right: $grid-buffer;
+            padding-bottom: $grid-buffer * 2;        
         }       
     }   
     @include atSmallest {
@@ -35,7 +36,8 @@ $grid-buffer: .75rem;
                 flex-basis: $i / $grid-max * 100%;
                 width: $i / $grid-max * 100%;                
                 padding-left: $grid-buffer;
-                padding-right: $grid-buffer;        
+                padding-right: $grid-buffer;
+                padding-bottom: $grid-buffer * 2;        
             }            
         }
     }
@@ -46,7 +48,8 @@ $grid-buffer: .75rem;
                 flex-basis: $i / $grid-max * 100%;
                 width: $i / $grid-max * 100%;
                 padding-left: $grid-buffer;
-                padding-right: $grid-buffer;        
+                padding-right: $grid-buffer;
+                padding-bottom: $grid-buffer * 2;        
             }  
         }           
     }
@@ -58,6 +61,7 @@ $grid-buffer: .75rem;
                 width: $i / $grid-max * 100%;
                 padding-left: $grid-buffer;
                 padding-right: $grid-buffer;
+                padding-bottom: $grid-buffer * 2;
             }   
         }          
     }  
@@ -69,6 +73,7 @@ $grid-buffer: .75rem;
                 width: $i / $grid-max * 100%;
                 padding-left: $grid-buffer;
                 padding-right: $grid-buffer;
+                padding-bottom: $grid-buffer * 2;
             }              
         }
     }          
@@ -80,6 +85,7 @@ $grid-buffer: .75rem;
                 width: $i / $grid-max * 100%;
                 padding-left: $grid-buffer;
                 padding-right: $grid-buffer;
+                padding-bottom: $grid-buffer * 2;
             }
         }       
     }
