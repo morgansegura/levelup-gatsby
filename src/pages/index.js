@@ -12,7 +12,7 @@ export default ({ data }) => {
       <div className="container">
         <div className="grid">
           {posts.map(({ node: post }) => (
-            <div key={post.id} className="p-b--1h item-12 item-sm-6 item-lg-4">
+            <div key={post.id} className="p-b--1h item-12 item-md-6 item-xl-4">
               {console.log(post)}
               <PostCard
                 classes="bg--white"

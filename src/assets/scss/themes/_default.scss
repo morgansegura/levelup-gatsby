@@ -14,13 +14,28 @@
     }
 }
 .nav__header {
-    & a {
-        color: white;
+    
+    @include atSmallest {
+        background-color: $grey-lighter; 
+        & a {
+            color: $grey-mid;
 
-        &.active,
-        &:hover {
-            color: rgba(white, .8);
+            &.active,
+            &:hover {
+                color: rgba(white, .8);
+            }        
         }        
+    }
+    @include atSmall {
+        background-color: transparent; 
+        & a {
+            color: white;
+
+            &.active,
+            &:hover {
+                color: rgba(white, .8);
+            }        
+        }      
     }
 }
 .card {
