@@ -5,8 +5,8 @@ import { github, rss, dribbble } from "react-icons-kit/entypo"
 
 const Footer = props => (
   <footer className="footer">
-    {console.log(props)}
-    <div className="grid">
+
+    <div className="grid container">
       <div className="item-12 item-md-3">
         <div className="nav__social">
           <a href="/" title="">

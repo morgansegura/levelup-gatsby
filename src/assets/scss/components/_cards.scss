@@ -32,7 +32,7 @@
         width: 100%;
         padding: 1.25rem;
     }
-    &__title {
+    &__title, a &__title {
         color: $grey-darker;
         font-size: 1.2rem;
         line-height: 1.4;      
@@ -40,6 +40,7 @@
         padding-top: 1rem;        
     }
     &__excerpt {
+        color: $grey-dark; 
         align-self: center;
         padding-top: 1rem;
         padding-bottom: 1rem;

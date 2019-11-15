@@ -1,25 +1,27 @@
 import React from "react"
 import { graphql } from "gatsby"
 import PrimaryLayout from "../layouts/PrimaryLayout"
-import Card from "../components/Card"
+import PostCard from "../components/PostCard"
 
 
 export default ({ data }) => {
-  console.log(data.allMarkdownRemark)
-  const posts = data.allMarkdownRemark.edges
+  const posts = data.BlogPosts.edges
   return (
     <PrimaryLayout className="container">
+      {console.log(posts)}
       <div className="container">
         <div className="grid">
           {posts.map(({ node: post }) => (
             <div key={post.id} className="p-b--1h item-12 item-sm-6 item-lg-4">
-              <Card
+              {console.log(post)}
+              <PostCard
                 classes="bg--white"
                 alt={post.frontmatter.description}
-                image={post.frontmatter.featuredimage}
+                featuredimage={post.frontmatter.featuredimage}
+                image={post.frontmatter.full_image}
                 title={post.frontmatter.title}
                 excerpt={post.excerpt}
-                readMore={post.fields.slug}
+                slug={post.fields.slug}
               />
             </div>
           ))}
@@ -30,41 +32,50 @@ export default ({ data }) => {
 }
 
 export const query = graphql`
-{
-  site {
-    siteMetadata {
-      url
-      nicename
-      short
-      alias
-      acronymn
-      title
-      description
-      keywords
-      favicon
-      logo
-      themeColor
-      backgroundColor   
+  {
+    site {
+      siteMetadata {
+        url
+        nicename
+        short
+        alias
+        acronymn
+        title
+        description
+        keywords
+        favicon
+        logo
+        themeColor
+        backgroundColor
+      }
     }
-  }
-  allMarkdownRemark {
-    edges {
-      node {
-        id
-        excerpt(pruneLength: 130)
-        frontmatter {
-          featuredimage
-          full_image
-          description
-          date(formatString: "DMY")
-          heading
-          tags
-        }
-        fields {
-          slug
+    BlogPosts: allMarkdownRemark(
+      filter: { frontmatter: { templateKey: { eq: "blog-post" } } }
+    ) {
+      edges {
+        node {
+          id
+          excerpt(pruneLength: 130)
+          frontmatter {
+            title
+            featuredimage {
+              childImageSharp {
+                fluid(maxWidth: 1200, quality: 100) {
+                  ...GatsbyImageSharpFluid
+                }
+              }
+            }
+            full_image
+            description
+            date(formatString: "MMMM DD, YYYY")
+            heading
+            tags
+          }
+          fields {
+            slug
+          }
         }
       }
     }
   }
-}
 `

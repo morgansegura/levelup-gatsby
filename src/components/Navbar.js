@@ -35,26 +35,28 @@ const Navbar = class extends React.Component {
   render() {
     // console.log(props)
     return (
-      <div className="header" bg="light" expand="lg">
-        <div className="header__logo" href="/">
-          <Link to="/">LevelUp</Link>
+      <div className="header__wrapper">
+        <div className="header container">
+          <div className="header__logo" href="/">
+            <Link to="/">LevelUp</Link>
+          </div>
+          <nav className="nav__header">
+            <ul>
+              <li>
+                <Link to="/">Home</Link>
+              </li>
+              <li>
+                <Link to="/blog">Blog</Link>
+              </li>
+              <li>
+                <Link to="/about">About Us</Link>
+              </li>
+              <li>
+                <Link to="/contact">Contact Us</Link>
+              </li>
+            </ul>
+          </nav>
         </div>
-        <nav className="nav__header">
-          <ul>
-            <li>
-              <Link to="/">Home</Link>
-            </li>
-            <li>
-              <Link to="/blog">Blog</Link>
-            </li>
-            <li>
-              <Link to="/about">About Us</Link>
-            </li>
-            <li>
-              <Link to="/contact">Contact Us</Link>
-            </li>
-          </ul>
-        </nav>
       </div>
     )
   }

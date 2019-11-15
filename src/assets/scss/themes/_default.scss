@@ -4,7 +4,10 @@
     background-color: $grey-lighter;
 }
 .header {
-    background-color: $theme-color-dark;
+
+    &__wrapper {
+        background-color: $theme-color-dark;        
+    }
 
     &__logo a {
         color:white;
@@ -32,11 +35,10 @@
     &:hover {
         z-index: 3;
         box-shadow: 0 12px 15px 0 rgba(0,0,0,.3);
-        transform: scale(1.0125);
+        // transform: scale(1.0125);
 
         & .btn {
-            background-color: $theme-color-darker;
-            color: rgba(white, .8);
+            background-color: $theme-color-dark;
         }
     }
     &:active {
