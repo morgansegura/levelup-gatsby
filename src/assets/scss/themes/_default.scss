@@ -31,7 +31,12 @@
     & .btn {
         background-color: rgba($grey-dark, .3);
         color: rgba(white, 1);
-    }    
+    }
+    &__image {
+        .card__with-border & {
+            border-bottom: 5px solid rgba($grey-dark, .3);            
+        }            
+    }  
     &:hover {
         z-index: 3;
         box-shadow: 0 12px 15px 0 rgba(0,0,0,.3);
@@ -40,6 +45,12 @@
         & .btn {
             background-color: $theme-color-dark;
         }
+        &.card__with-border .card__image {
+            border-bottom: 5px solid $theme-color-lighter;
+        }          
+        // & .card__image {
+        //     height: 14.8125rem;
+        // }          
     }
     &:active {
         box-shadow: none;

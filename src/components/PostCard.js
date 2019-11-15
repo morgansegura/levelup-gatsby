@@ -3,7 +3,7 @@ import { Link } from "gatsby"
 import PreviewCompatibleImage from "./PreviewCompatibleImage"
 
 const PostCard = props => (
-  <Link to={props.slug} className={`card ${props.classes}`}>
+  <Link to={props.slug} className={`card card__with-border ${props.classes}`}>
     {console.log(props)}
     {props.featuredimage ? (
       <PreviewCompatibleImage
