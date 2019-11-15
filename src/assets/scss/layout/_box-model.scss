@@ -1,8 +1,11 @@
 
-$pad-min: 1;
+$pad-min: 0;
 $pad-max: 10;
 
 .m {
+    &-b--1h {
+        margin-bottom: 1.5rem;
+    }
     @for $pad from $pad-min through $pad-max { 
         &-t--#{$pad} {
             margin-top: #{$pad}rem;
@@ -27,6 +30,9 @@ $pad-max: 10;
     }
 }
 .p {
+    &-b--1h {
+        margin-bottom: 1.5rem;
+    }    
     @for $pad from $pad-min through $pad-max { 
         &-t--#{$pad} {
             padding-top: #{$pad}rem;

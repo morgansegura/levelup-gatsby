@@ -79,14 +79,15 @@
     & ul {
         display: flex;
         flex-wrap: wrap;
-        justify-content: space-evenly;       
+        justify-content: space-evenly; 
+        padding-bottom: .5rem;      
     }
     & li {
         padding-left: .5rem;
         padding-right: .5rem;
     }
     & a {
-        color: $grey-dark;
+        color: $grey-mid;
         text-transform: uppercase;
         font-weight: 600;
         transition: color .3s ease-out;
@@ -98,20 +99,26 @@
     }
 
     @include atSmallest {
-        padding: .5rem 0 1rem 0;
+
         & a {
-            font-size: 0.9rem;
+            font-size: 0.875rem;
         }
     }    
   
     @include atMedium { 
-        justify-content: flex-end;
+        padding-bottom: 0;
 
-        & li {
-            padding-right: 1rem;
-        }             
         & a {
-            font-size: 0.975rem;
+            font-size: 0.875rem;
         }        
     }    
+}
+.nav__social {
+    padding-bottom: .5rem;
+
+    @include atMedium {
+        padding-right: 1rem;
+        padding-left: 1rem;
+        padding-bottom: 0;
+    }      
 }

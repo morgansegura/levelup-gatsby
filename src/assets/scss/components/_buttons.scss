@@ -31,6 +31,17 @@
             background-color: darken($theme-color, 10%);
         }        
     }
+    &--grey-mid {
+        color: white;
+        background-color: $grey-mid;
+
+        &:hover {
+            background-color: lighten($theme-color, 5%);
+        }
+        &:active {
+            background-color: darken($theme-color, 10%);
+        }        
+    }
     &:active {
         // box-shadow: 0 -2px 2px rgba(0,0,0,.2);
     }

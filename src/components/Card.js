@@ -24,7 +24,7 @@ const Card = props => (
       ) : null}
 
       <div className="card__icon" href={props.readMore}>
-        <span className="btn btn--sm btn--theme-color">Read More</span>
+        <span className="btn btn--sm">Read More</span>
       </div>
     </div>
   </div>

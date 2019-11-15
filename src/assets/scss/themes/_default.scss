@@ -4,7 +4,7 @@
     background-color: $grey-lighter;
 }
 .header {
-    background-color: $theme-color;
+    background-color: $theme-color-dark;
 
     &__logo a {
         color:white;
@@ -21,11 +21,58 @@
     }
 }
 .card {
-    background-color: white;
+    cursor: pointer;
+    transform: scale(1);
     // box-shadow: 0 2px 5px 0 rgba(0,0,0,.3);
-    // border: 1px solid rgba(black, .1);        
+    // border: 1px solid rgba(black, .1);   
+    & .btn {
+        background-color: rgba($grey-dark, .3);
+        color: rgba(white, 1);
+    }    
+    &:hover {
+        z-index: 3;
+        box-shadow: 0 12px 15px 0 rgba(0,0,0,.3);
+        transform: scale(1.0125);
+
+        & .btn {
+            background-color: $theme-color-darker;
+            color: rgba(white, .8);
+        }
+    }
+    &:active {
+        box-shadow: none;
+    }
 }
 .footer,
 .card  {
     background-color: white;
+}
+.footer__logo {
+    margin-left: auto;
+}
+.nav__social {
+
+    margin-left: auto;
+    margin-right: auto;
+
+    a {
+        color: $grey-mid;
+
+        &:hover {
+            color: $theme-color;
+        }
+    }
+    svg {
+        width: 18px;
+        height: 18px;
+        margin-left: .5rem;
+        margin-right: .5rem;
+    }
+
+    @include atMedium {
+        padding-right: 1rem;
+        padding-left: 1rem;
+        margin-left: 0;
+        margin-right: 0;        
+    }      
 }

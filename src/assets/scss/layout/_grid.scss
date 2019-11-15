@@ -25,8 +25,7 @@ $grid-buffer: .75rem;
             flex-basis: $i / $grid-max * 100%;
             width: $i / $grid-max * 100%;                
             padding-left: $grid-buffer;
-            padding-right: $grid-buffer;
-            padding-bottom: $grid-buffer * 2;        
+            padding-right: $grid-buffer;                    
         }       
     }   
     @include atSmallest {
@@ -36,8 +35,7 @@ $grid-buffer: .75rem;
                 flex-basis: $i / $grid-max * 100%;
                 width: $i / $grid-max * 100%;                
                 padding-left: $grid-buffer;
-                padding-right: $grid-buffer;
-                padding-bottom: $grid-buffer * 2;        
+                padding-right: $grid-buffer;                        
             }            
         }
     }
@@ -48,8 +46,7 @@ $grid-buffer: .75rem;
                 flex-basis: $i / $grid-max * 100%;
                 width: $i / $grid-max * 100%;
                 padding-left: $grid-buffer;
-                padding-right: $grid-buffer;
-                padding-bottom: $grid-buffer * 2;        
+                padding-right: $grid-buffer;                        
             }  
         }           
     }
@@ -60,8 +57,7 @@ $grid-buffer: .75rem;
                 flex-basis: $i / $grid-max * 100%;
                 width: $i / $grid-max * 100%;
                 padding-left: $grid-buffer;
-                padding-right: $grid-buffer;
-                padding-bottom: $grid-buffer * 2;
+                padding-right: $grid-buffer;                
             }   
         }          
     }  
@@ -72,8 +68,7 @@ $grid-buffer: .75rem;
                 flex-basis: $i / $grid-max * 100%;
                 width: $i / $grid-max * 100%;
                 padding-left: $grid-buffer;
-                padding-right: $grid-buffer;
-                padding-bottom: $grid-buffer * 2;
+                padding-right: $grid-buffer;                
             }              
         }
     }          
@@ -84,8 +79,7 @@ $grid-buffer: .75rem;
                 flex-basis: $i / $grid-max * 100%;
                 width: $i / $grid-max * 100%;
                 padding-left: $grid-buffer;
-                padding-right: $grid-buffer;
-                padding-bottom: $grid-buffer * 2;
+                padding-right: $grid-buffer;                
             }
         }       
     }
