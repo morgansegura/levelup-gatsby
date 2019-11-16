@@ -2,7 +2,7 @@
 templateKey: tutorial-post
 title: My First Tutoiral
 date: 2019-11-16T05:36:47.920Z
-description: This will be a new tutorial
+description: 'This will be a new tutorial '
 featuredpost: false
 featuredimage: /src/assets/images/person-standing-in-green-grass-terraces-2162133.jpg
 tags:
