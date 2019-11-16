@@ -1,6 +1,6 @@
 ---
 templateKey: tutorial-post
-title: My First Tutoiral
+title: My First Tutorial
 date: 2019-11-16T05:36:47.920Z
 description: 'This will be a new tutorial '
 featuredpost: false
