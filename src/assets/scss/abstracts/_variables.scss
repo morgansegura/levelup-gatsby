@@ -17,6 +17,7 @@ $theme-color-network: #ff4027;
 /* Alt Colors */
 $grey-darker: #19181d;
 $grey-dark: #383d40;
+$grey-dark-steel: lighten($grey-dark, 50%);
 $grey-mid: #727282;
 $grey-light: #f8f8f8;
 $grey-lighter: #f1f1f1;

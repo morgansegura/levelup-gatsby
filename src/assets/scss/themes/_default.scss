@@ -1,5 +1,9 @@
 // Colors
-
+.bg {
+    &--grey-dark-steel {
+        background-color: rgba($grey-dark-steel, .25);
+    }
+}
 .wrapper {
     background-color: $grey-lighter;
 }
@@ -44,12 +48,12 @@
     // box-shadow: 0 2px 5px 0 rgba(0,0,0,.3);
     // border: 1px solid rgba(black, .1);   
     & .btn {
-        background-color: rgba($grey-dark, .3);
+        background-color: $grey-dark-steel;
         color: rgba(white, 1);
     }
     &__image {
         .card__with-border & {
-            border-bottom: 5px solid rgba($grey-dark, .3);            
+            border-bottom: 5px solid $grey-dark-steel;            
         }            
     }  
     &:hover {
@@ -74,6 +78,9 @@
 .footer,
 .card  {
     background-color: white;
+}
+.bg--grey-dark-steel .card {
+    background-color: $grey-lighter;
 }
 .footer__logo {
     margin-left: auto;

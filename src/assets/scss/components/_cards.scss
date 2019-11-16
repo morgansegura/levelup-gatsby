@@ -25,15 +25,29 @@
         .card__with-border & {
             border-bottom: 5px solid;            
         }
+        @include atMedium {
+            .card__half-tall & {
+                // height: 68.3%;
+                flex: 1;
+
+                & > div {
+                    padding-bottom: 0% !important;
+                }
+            }            
+        }
     }   
     &__content {
         position: relative;
         display: flex; 
         flex-direction: column;
-        flex: 1;
+        flex: 1; 
         justify-content: stretch;
         width: 100%;
         padding: 1.25rem;
+
+        .card__half-tall & {
+            flex: 0;
+        }          
     }
     &__title, a &__title {
         color: $grey-darker;

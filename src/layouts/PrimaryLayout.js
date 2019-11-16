@@ -11,7 +11,7 @@ const PrimaryLayout = props => (
     <SEO data={settings} />
     <Header data={settings} />
     <main className="main content">
-      <div className="container">{props.children}</div>
+      {props.children}
     </main>
     <Footer data={settings} />
   </div>
