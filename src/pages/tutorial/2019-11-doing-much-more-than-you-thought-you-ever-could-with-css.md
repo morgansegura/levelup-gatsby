@@ -18,7 +18,11 @@ tags:
 
 ## They're little gifts. We'll make some happy little bushes here.
 
-Learn when to stop. We'll throw some old gray clouds in here just sneaking around and having fun. Now it's beginning to make a little sense. Let's have a little bit of fun today.
+Learn when to stop. We'll throw some old gray clouds in here just sneaking around and 
+
+![Image](/src/assets/images/photo-of-an-empty-road-during-daytime-2990770.jpg "This is an image")
+
+having fun. Now it's beginning to make a little sense. Let's have a little bit of fun today.
 
 We'll have a super time. I thought today we would do a happy little picture. If you do too much it's going to lose its effectiveness.
 
