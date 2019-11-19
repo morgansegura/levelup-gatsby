@@ -3,10 +3,6 @@ templateKey: tutorial-post
 title: Doing much more than you thought you ever could with CSS
 date: 2019-11-16T06:06:50.959Z
 description: >-
-  Have fun with it. We'll do another happy little painting. Put your feelings
-  into it, your heart, it's your world. There we go. Let's get crazy.
-
-
   This is a fantastic little painting. Painting should do one thing. It should
   put happiness in your heart. That's what makes life fun. That you can make
   these decisions. That you can create the world that you want. It's life. It's
