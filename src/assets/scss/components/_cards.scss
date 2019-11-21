@@ -99,3 +99,46 @@
         }              
     }
 }
+
+@include atMedium {
+    .card.card__dark-overlay {  
+        background-color: transparent;        
+
+        .card__image {
+            position: relative;
+            z-index: 1;          
+            flex: 1;
+     
+        }
+        .card__content {
+            position: absolute;
+            bottom: 0;
+            z-index: 1; 
+            
+            &:before {
+                content: "";
+                position: absolute;
+                z-index: -1;
+                background-color: rgba(black, .75);
+                width: 100%;
+                left: 0;
+                right: 0;
+                top: 0;
+                bottom: 0;
+            } 
+            
+            & .btn {
+                color: $grey-darker;
+            }
+        }    
+        .card__title,
+        a > .card__title {
+            color: rgba(white, 1);
+        }
+        .card__subheading,
+        .card__subtitle,
+        .card__excerpt {
+            color: rgba(white, .8);
+        }
+    }
+}

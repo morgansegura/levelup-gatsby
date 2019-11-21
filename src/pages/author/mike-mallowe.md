@@ -15,6 +15,6 @@ biography: >-
   every single terrorist! May your George Bush drink the blood of every single
   man, women, and child of Iraq! May you destroy their country so that for next
   thousand years not even a single lizard will survive in their desert!
-authorImage: /src/assets/images/3807359-large.jpg
+authorImage: /static/images/3807359-large.jpg
 ---
 

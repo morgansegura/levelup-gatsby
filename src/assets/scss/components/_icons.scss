@@ -1,1 +1,18 @@
 // _icons.scss
+
+.icon {
+
+    &__new-item {
+        position: absolute;
+        top: .5rem;
+        left: 1.5rem;
+        z-index: 2;
+        color: $theme-color;
+
+        & svg {
+            fill: black;
+            width: 30px;
+            height: 30px;
+        }
+    }
+}

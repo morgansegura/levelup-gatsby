@@ -1,29 +1,45 @@
 import Typography from "typography"
 
 const typography = new Typography({
-  baseFontSize: '18px',
+  baseFontSize: "18px",
   baseLineHeight: 1.7,
-  bodyFontFamily: ['Montserrat', 'Helvetica Neue', 'Segoe UI', 'Helvetica', 'Arial', 'sans-serif'],
-  bodyWeight: '400',
-  boldWeight: '700',
-  headerFontFamily: ['Montserrat', 'Helvetica Neue', 'Segoe UI', 'Helvetica', 'Arial', 'sans-serif'], 
-  headerWeight: '700',
+  bodyFontFamily: [
+    "Montserrat",
+    "Helvetica Neue",
+    "Segoe UI",
+    "Helvetica",
+    "Arial",
+    "sans-serif",
+  ],
+  bodyWeight: "400",
+  boldWeight: "700",
+  headerFontFamily: [
+    "Montserrat",
+    "Helvetica Neue",
+    "Segoe UI",
+    "Helvetica",
+    "Arial",
+    "sans-serif",
+  ],
+  h4: [
+    "Merriweather",
+    "serif",
+  ],
+  headerWeight: "700",
   h1: {
-    fontSize: '40px'
+    fontSize: "40px",
   },
-  includeNormalize: true, 
+  includeNormalize: true,
   googleFonts: [
     {
-      name: 'Montserrat',
-      styles: [
-        '400',
-        '500',
-        '600',
-        '700',
-        '900',
-      ],
+      name: "Montserrat",
+      styles: ["300", "400", "500", "600", "700", "900"],
     },
-  ],  
+    {
+      name: "Merriweather",
+      styles: ["300", "400", "700", "900"],
+    },
+  ],
 })
 
 // Hot reload typography in development.

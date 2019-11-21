@@ -6,7 +6,7 @@ import { graphql, Link } from "gatsby"
 import PrimaryLayout from "../layouts/PrimaryLayout"
 import Content, { HTMLContent } from "../components/Content"
 
-export const BlogPostTemplate = ({
+export const AuthorPostTemplate = ({
   content,
   contentComponent,
   description,
@@ -22,9 +22,7 @@ export const BlogPostTemplate = ({
       <div className="container post content">
         <div className="grid">
           <div className="item-12 item-md-10">
-            <h1 className="title">
-              {title} What??????
-            </h1>
+            <h1 className="title">{title} What??????</h1>
             <p>{description}</p>
             <PostContent content={content} />
             {tags && tags.length ? (
@@ -46,7 +44,7 @@ export const BlogPostTemplate = ({
   )
 }
 
-BlogPostTemplate.propTypes = {
+AuthorPostTemplate.propTypes = {
   content: PropTypes.node.isRequired,
   contentComponent: PropTypes.func,
   description: PropTypes.string,
@@ -54,12 +52,12 @@ BlogPostTemplate.propTypes = {
   helmet: PropTypes.object,
 }
 
-const BlogPost = ({ data }) => {
+const AuthorPost = ({ data }) => {
   const { markdownRemark: post } = data
 
   return (
     <PrimaryLayout>
-      <BlogPostTemplate
+      <AuthorPostTemplate
         content={post.html}
         contentComponent={HTMLContent}
         description={post.frontmatter.description}
@@ -79,16 +77,16 @@ const BlogPost = ({ data }) => {
   )
 }
 
-BlogPost.propTypes = {
+AuthorPost.propTypes = {
   data: PropTypes.shape({
     markdownRemark: PropTypes.object,
   }),
 }
 
-export default BlogPost
+export default AuthorPost
 
 export const pageQuery = graphql`
-  query BlogPostByID($id: String!) {
+  query AuthorPostByID($id: String!) {
     markdownRemark(id: { eq: $id }) {
       id
       html

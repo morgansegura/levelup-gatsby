@@ -17,7 +17,7 @@ const BlogpostLayout = ({ data }) => {
       <Header />
       <main>
         <div className="container">
-          <div className="row justify-content-md-center">
+          <div className="">
             <h1 dangerouslySetInnerHTML={{ __html: post.title }} />
             <div dangerouslySetInnerHTML={{ __html: post.content }} />
           </div>

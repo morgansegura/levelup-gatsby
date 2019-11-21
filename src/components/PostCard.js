@@ -3,8 +3,7 @@ import { Link } from "gatsby"
 import PreviewCompatibleImage from "./PreviewCompatibleImage"
 
 const PostCard = props => (
-  <Link to={props.slug} className={`card card__with-border ${props.classes}`}>
-    {console.log(props)}
+  <Link to={props.slug} className={`card ${props.classes}`}>
     {props.featuredimage ? (
       <PreviewCompatibleImage
         imageInfo={{
@@ -14,6 +13,15 @@ const PostCard = props => (
           alt: `featured image thumbnail for post ${props.title}`,
         }}
       />
+    ) : null}
+    {props.tags ? (
+      <div className="tags">
+        {props.tags.map(tag => (
+          <Link className="tag" to={`/tags/${tag.replace(/ /g, '-').toLowerCase()}/`}>
+            <span>{tag}</span>
+          </Link>
+        ))}
+      </div>
     ) : null}
     <div className="card__content">
       {props.title ? (
