@@ -11,7 +11,7 @@ description: >-
   players screening phone calls. Hot pink pop punk home skillet got milk zack
   morris.
 featuredpost: false
-featuredimage: /src/assets/images/person-standing-in-green-grass-terraces-2162133.jpg
+featuredimage: /src/assets/images/brown-and-red-lighted-carousel-3008100.jpg
 tags:
   - Mazda
   - mpv
