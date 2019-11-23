@@ -10,7 +10,7 @@ description: >-
   overalls with one strap undone mad props home improvement. Personalized
   mixtapes extreme sports george michael rachel green dawson’s creek.
 featuredpost: false
-featuredimage: /images/photo-of-cloud-2733862.jpg
+featuredimage: /images/two-men-performs-on-stage-while-holding-rainbow-colored-2422474.jpg
 tags:
   - shania
   - twain
