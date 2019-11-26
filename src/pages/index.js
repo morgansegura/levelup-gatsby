@@ -7,15 +7,14 @@ import PostCard from "../components/PostCard"
 export default ({ data }) => {
   const posts = data.BlogPosts.edges
   const tutorials = data.TutorialPosts.edges
-  console.log(posts)
-  console.log(tutorials)
-  let singlePostItem = (item=null, key=null, classes=null) => (
+  // console.log(posts)
+  // console.log(tutorials)
+  let singlePostItem = (item=null, key=null, classes=``) => (
     <PostCard
       key={key}
       classes={classes}
       alt={item.frontmatter.description}
-      featuredimage={item.frontmatter.featuredimage}
-      image={item.frontmatter.full_image}
+      image={item.frontmatter.featuredimage}
       title={item.frontmatter.title}
       tags={item.frontmatter.tags}
       excerpt={item.excerpt}
@@ -39,25 +38,33 @@ export default ({ data }) => {
       {tutorials.length > 0 ? (
         <div className="content__wrapper bg--grey-dark-steel">
           <div className="container">
-            <h2 className="heading">
-              <span className="border--top">Tutorials</span>
-            </h2>
+
+            <header className="content__header">
+              <h2 className="heading">
+                <span className="border--top">Tutorials</span>
+              </h2>
+              <h3 className="subheading">
+                <span>Subheading</span>
+              </h3>            
+            </header>
 
             <div className="tutorials">
-              <p className="subheading">Subheading</p>
-
               <div className="grid">
                 <div className="card__half-tall item-12 item-md-6">
                   {tutorials.map(
-                    ({ node: tutorial }, i) => 
-                      i === 0 ? singlePostItem(tutorial, i, "card__dark-overlay p-b--1h") : null
-                    )}
+                    ({ node: tutorial }, i) =>
+                      i === 0 ? (
+                        singlePostItem(tutorial, tutorial.id, 'card__dark-overlay p-b--1h')
+                      ) : null
+                  )}
                 </div>
 
                 <div className="card__half-stack flex-column item-12 item-md-6">
                   {tutorials.map(
                     ({ node: tutorial }, i) =>
-                      i > 0 && i < 3 ? singlePostItem(tutorial, i, "p-b--1h") : null
+                      i > 0 && i < 3 ? (                    
+                        singlePostItem(tutorial, tutorial.id, 'p-b--1h')
+                      ) : null                   
                   )}
                 </div>
               </div>
@@ -96,14 +103,14 @@ export const query = graphql`
           excerpt(pruneLength: 130)
           frontmatter {
             title
-            featuredimage
-            # featuredimage {
-            #   childImageSharp {
-            #     fluid(maxWidth: 1200, quality: 100) {
-            #       ...GatsbyImageSharpFluid
-            #     }
-            #   }
-            # }
+            # featuredimage
+            featuredimage {
+              childImageSharp {
+                fluid(maxWidth: 1200, quality: 100) {
+                  ...GatsbyImageSharpFluid
+                }
+              }
+            }
             full_image
             description
             date(formatString: "MMMM DD, YYYY")
@@ -125,14 +132,14 @@ export const query = graphql`
           excerpt(pruneLength: 130)
           frontmatter {
             title
-            featuredimage
-            # featuredimage {
-            #   childImageSharp {
-            #     fluid(maxWidth: 1200, quality: 100) {
-            #       ...GatsbyImageSharpFluid
-            #     }
-            #   }
-            # }
+            # featuredimage
+            featuredimage {
+              childImageSharp {
+                fluid(maxWidth: 1200, quality: 100) {
+                  ...GatsbyImageSharpFluid
+                }
+              }
+            }
             full_image
             description
             date(formatString: "MMMM DD, YYYY")

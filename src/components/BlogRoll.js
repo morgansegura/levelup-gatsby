@@ -86,14 +86,14 @@ export default () => (
                 templateKey
                 date(formatString: "MMMM DD, YYYY")
                 featuredpost
-                featuredimage
-                # featuredimage {
-                #   childImageSharp {
-                #     fluid(maxWidth: 1200, quality: 100) {
-                #       ...GatsbyImageSharpFluid
-                #     }
-                #   }
-                # }
+                # featuredimage
+                featuredimage {
+                  childImageSharp {
+                    fluid(maxWidth: 1200, quality: 100) {
+                      ...GatsbyImageSharpFluid
+                    }
+                  }
+                }
               }
             }
           }

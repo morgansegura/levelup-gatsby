@@ -55,19 +55,31 @@
         &.underline {
             border-bottom: 1px solid $theme-color;
         }
-    }   
+    }
+    &__header {
+        margin-top: 0;
+        margin-bottom: 0;
+    }
     .heading, .subheading {        
         text-align: center;
 
         @include atSmall {
             text-align: left;
         }
-    }     
+    }   
+    .subheading {
+        margin-top: .5rem;        
+        margin-bottom: 2rem;
+        font-weight: 600;
+        color: rgba($grey-dark, .8);
+        font-size: 1.125rem;
+        text-transform: uppercase;
+
+    }
 
     .border--top {
         position: relative; 
         display: inline-block;
-        margin-bottom: 2rem;
 
         &:before {
             content: "";

@@ -4,18 +4,18 @@ import PreviewCompatibleImage from "./PreviewCompatibleImage"
 
 const PostCard = props => (
   <Link to={props.slug} className={`card ${props.classes}`}>
-    {props.featuredimage ? (
+    {props.image ? (
       <PreviewCompatibleImage
         imageInfo={{
           className: "card__image",
-          image: props.featuredimage,
-          // image: `${props.full_image}`,
+          image: props.image,
           alt: `featured image thumbnail for post ${props.title}`,
         }}
       />
     ) : null}
     {props.tags ? (
       <div className="tags">
+        <span className="tags__title">Tags: </span>
         {props.tags.map(tag => (
           <Link className="tag" to={`/tags/${tag.replace(/ /g, '-').toLowerCase()}/`}>
             <span>{tag}</span>
