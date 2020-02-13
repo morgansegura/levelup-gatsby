@@ -1,0 +1,29 @@
+.search {
+
+    &__trigger {
+        align-self: center;
+        text-align: right;
+        cursor: pointer;
+        border-color: transparent;
+        background-color: transparent;
+        width: 25%;
+        flex-basis: 25%;
+
+        @include atSmallest {
+            padding-right: 1rem;
+        }
+        @include atMedium {
+            align-self: flex-end;
+            padding-bottom: 1rem;
+            width: 10%;
+            flex-basis: 10%;
+            order: 3;            
+        }
+
+        svg {
+            fill: $grey-darker;
+            width: 23px;
+            height: 23px;
+        }
+    }
+}

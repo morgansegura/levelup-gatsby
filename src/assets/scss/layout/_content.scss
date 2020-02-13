@@ -1,0 +1,116 @@
+.wrapper {
+    width: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: column;    
+    min-height: 100vh;
+}
+.container {
+    margin-right: auto;
+    margin-left: auto;
+    padding-left: $buffer;
+    padding-right: $buffer;
+
+    @include atSmallest {
+
+    }
+    @include atSmall {
+        width: 100%;
+        max-width: $container-sm;        
+    }  
+    @include atMedium {
+        max-width: $container-md;        
+    }  
+    @include atLarge {
+        max-width: $container-lg;      
+    }
+    @include atLargest {
+        max-width: $container-xl;      
+    }
+    
+    &--fluid {
+        padding: 1.5rem;
+    }
+}
+
+.main {
+    flex: 1; 
+    height: 100%   
+}
+.content {
+    position: relative;
+    z-index: 2;
+    
+    &__wrapper {
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+    }
+
+    h2 {
+        font-size: 1.8rem;
+        line-height: 2;
+        font-weight: 600;
+    }
+    p {
+        font-size: 1.125rem;
+    }
+
+    a {
+        color: $theme-color-network;
+        text-decoration: none;
+        border-bottom: none;
+
+        &.underline {
+            border-bottom: 1px solid $theme-color-dark;
+        }
+    }
+    &__header {
+        margin-top: 0;
+        margin-bottom: 0;
+        padding: 1rem 0;
+        display: flex;
+        align-items: flex-start;
+
+        &--inner {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            padding-right: 1.5rem;
+        }
+        p {
+            font-size: 1rem;
+        }
+    }
+    .heading, .subheading {        
+        text-align: center;
+
+        @include atSmall {
+            text-align: left;
+        }
+    }   
+    .subheading {
+        margin-top: .5rem;        
+        // margin-bottom: 2rem;
+        font-weight: 600;
+        font-size: 1.125rem;
+        text-transform: uppercase;
+
+    }
+}
+
+.border--bottom {
+    position: relative; 
+    display: inline-block;
+
+    &:before {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 5px;
+        border-radius: 10px;
+    }
+}
