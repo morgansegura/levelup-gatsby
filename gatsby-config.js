@@ -12,8 +12,9 @@ require("dotenv").config({
 module.exports = {
   /* Your site config here */
   siteMetadata: {
-    siteUrl: settings.url,
-    url: settings.url,
+    siteUrl: process.env.SITE_URL,
+    baseUrl: process.env.BASE_URL,
+    url: process.env.SITE_URL,
     nicename: settings.nicename,
     short: settings.short,
     alias: settings.alias,
@@ -81,9 +82,9 @@ module.exports = {
          * The base URL of the WordPress site without the trailingslash and the protocol. This is required.
          * Example : 'demo.wp-api.org' or 'www.example-site.com'
          */
-        baseUrl: "dev.codeboomwp",
+        baseUrl: process.env.BASE_URL,
         // The protocol. This can be http or https.
-        protocol: "http",
+        protocol: process.env.BASE_PROTOCOL,
         // The rest api route prefix that your WordPress site is using.
         // Sometimes this is modified by WordPress plugins.
         // If not set, it uses the default of "wp-json"
@@ -140,10 +141,10 @@ module.exports = {
         // Set how many pages are retrieved per API request.
         perPage: 100,
         // Search and Replace Urls across WordPress content.
-        searchAndReplaceContentUrls: {
-          sourceUrl: "https://source-url.com",
-          replacementUrl: "https://replacement-url.com",
-        },
+        // searchAndReplaceContentUrls: {
+          // sourceUrl: "https://source-url.com",
+          // replacementUrl: "https://replacement-url.com",
+        // },
         // Set how many simultaneous requests are sent at once.
         concurrentRequests: 10,
         // Set WP REST API routes whitelists
@@ -196,6 +197,17 @@ module.exports = {
         ],
       },
     },
+    // {
+    //   resolve: 'gatsby-source-graphql-universal',
+    //   options: {
+    //     // This type will contain remote schema Query type
+    //     typeName: 'WPGraphQL',
+    //     // This is field under which it's accessible
+    //     fieldName: 'wpgraphql',
+    //     // Url to query from
+    //     url: `${process.env.SITE_URL}/graphql`,
+    //   },
+    // }, 
     {
       resolve: `gatsby-plugin-manifest`,
       options: {

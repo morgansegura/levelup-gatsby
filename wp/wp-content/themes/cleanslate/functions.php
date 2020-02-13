@@ -133,6 +133,30 @@ function wpgatsby_scripts() {
 add_action( 'wp_enqueue_scripts', 'wpgatsby_scripts' );
 
 /**
+ * WP-Gatsby Preview
+ */
+add_filter('preview_post_link', function ($link) {
+	global $post;
+	$post_ID = $post->post_parent;
+	$post_slug = get_post_field( 'post_name', $post_id );
+	return 'http://localhost:8000/'
+		. 'preview?slug='
+		. $post_slug . '&wpnonce='
+		. wp_create_nonce('wp_rest');
+});
+
+add_filter( 'graphql_access_control_allow_headers', function( $headers ) {
+	return array_merge( $headers, [ 'x-wp-nonce' ] );
+});
+
+add_filter( 'graphql_response_headers_to_send', function( $headers ) {
+	return array_merge( $headers, [
+		'Access-Control-Allow-Origin'  => 'http://localhost:8000',
+		'Access-Control-Allow-Credentials' => 'true'
+	] );
+} );
+
+/**
  * Implement the Custom Header feature.
  */
 require get_template_directory() . '/inc/custom-header.php';

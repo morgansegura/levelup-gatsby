@@ -1,5 +1,6 @@
 // Vendors
 @import './node_modules/@fortawesome/fontawesome-free/scss/fontawesome';
+@import './node_modules/tachyons/css/tachyons.min';
 
 // Abstracts
 @import './abstracts/variables';
@@ -11,61 +12,61 @@
 // Base
 // @import './base/normalize'; // using reset for now (its up for debate!)
 @import './base/reset';
-@import './base/theme';
-@import './base/typography';
-@import './base/base';
-@import './base/tools';
-@import './base/print';
+// @import './base/theme';
+// @import './base/typography';
+// @import './base/base';
+// @import './base/tools';
+// @import './base/print';
 
 // Layout
-@import './layout/box-model';
-@import './layout/grid';
-@import './layout/content';
-@import './layout/main';
-@import './layout/flex';
-@import './layout/tables';
-@import './layout/lists';
-@import './layout/tags';
-@import './layout/navigation';
-@import './layout/header';
-@import './layout/footer';
-@import './layout/sidebar';
-@import './layout/forms';
-@import './layout/ads';
-@import './layout/post';
-@import './layout/other-articles';
-@import './layout/recent-posts';
-@import './layout/recommended';
+// @import './layout/box-model';
+// @import './layout/grid';
+// @import './layout/content';
+// @import './layout/main';
+// @import './layout/flex';
+// @import './layout/tables';
+// @import './layout/lists';
+// @import './layout/tags';
+// @import './layout/navigation';
+// @import './layout/header';
+// @import './layout/footer';
+// @import './layout/sidebar';
+// @import './layout/forms';
+// @import './layout/ads';
+// @import './layout/post';
+// @import './layout/other-articles';
+// @import './layout/recent-posts';
+// @import './layout/recommended';
 
 // Components
-@import './components/hero';
-@import './components/buttons';
-@import './components/paper';
-@import './components/search';
-@import './components/icons';
-@import './components/cards';
-@import './components/selectors';
-@import './components/images';
-@import './components/shapes';
-@import './components/tags';
-@import './components/slider';
-@import './components/author';
+// @import './components/hero';
+// @import './components/buttons';
+// @import './components/paper';
+// @import './components/search';
+// @import './components/icons';
+// @import './components/cards';
+// @import './components/selectors';
+// @import './components/images';
+// @import './components/shapes';
+// @import './components/tags';
+// @import './components/slider';
+// @import './components/author';
 
 // Pages
-@import './pages/home';
-@import './pages/about';
-@import './pages/contact';
-@import './pages/page';
-@import './pages/single';
-@import './pages/search';
-@import './pages/large_file';
+// @import './pages/home';
+// @import './pages/about';
+// @import './pages/contact';
+// @import './pages/page';
+// @import './pages/single';
+// @import './pages/search';
+// @import './pages/large_file';
 
 // Browsers
 @import './browsers/ie';
 
 // Themes
-@import './themes/default';
+// @import './themes/default';
 
 // Themes
-@import './design/aside';
+// @import './design/aside';
 // @import './themes/admin';

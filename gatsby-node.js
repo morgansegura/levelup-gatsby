@@ -78,6 +78,7 @@ exports.createPages = async ({ graphql, actions }) => {
       component: slash(pageTemplate),
       context: {
         id: edge.node.id,
+        slug: edge.node.slug,
       },
     })
   })
@@ -93,6 +94,7 @@ exports.createPages = async ({ graphql, actions }) => {
       component: slash(postTemplate),
       context: {
         id: edge.node.id,
+        slug: edge.node.slug,
       },
     })
   })
@@ -108,6 +110,7 @@ exports.createPages = async ({ graphql, actions }) => {
       component: slash(categoryTemplate),
       context: {
         id: edge.node.id,
+        slug: edge.node.slug,
       },
     })
   })

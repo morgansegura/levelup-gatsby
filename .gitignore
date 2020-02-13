@@ -101,5 +101,6 @@ wp/wp-content/plugins/*
 !wp/wp-content/plugins/advanced-custom-fields-pro
 !wp/wp-content/plugins/jwt-authentication-for-wp-rest-api
 !wp/wp-content/plugins/wp-buildhook-deploy
+!wp/wp-content/plugins/wp-graphql
 !wp/wp-content/plugins/wp-rest-api-v2-menus
 !wp/wp-content/plugins/index.php
