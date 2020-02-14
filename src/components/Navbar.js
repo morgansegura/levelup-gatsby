@@ -70,11 +70,17 @@ const Search = styled.div `
   }
 
   input {
+    border-color: ${palette.primary.contrast};
+    background-color: ${palette.primary.light};
+    box-shadow: none;
+    padding: .45rem;
+    border-radius: 6px;
+
     @media ${device.mobile} {
       display: none;
     }
     @media ${device.tablet} {
-      display: block;
+      display: inherit;
     }      
   }
 `
