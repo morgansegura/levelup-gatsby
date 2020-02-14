@@ -9,8 +9,6 @@ import 'typeface-aleo';
 import 'typeface-lato';
 import 'typeface-merriweather';
 
-import "../assets/css/bundle.css";
-
 const BlogPostLayout = props => (
   <div className="wrapper">
     <SEO data={settings} />
