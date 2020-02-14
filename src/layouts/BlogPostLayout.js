@@ -6,7 +6,7 @@ import SEO from "../components/SEO"
 import * as settings from "../../settings"
 
 import 'typeface-aleo';
-import 'typeface-lato';
+import 'typeface-source-sans-pro';
 import 'typeface-merriweather';
 
 const BlogPostLayout = props => (

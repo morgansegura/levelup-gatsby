@@ -70,7 +70,7 @@ const Search = styled.div `
   }
 
   input {
-    border-color: ${palette.primary.contrast};
+    border: 1px solid ${palette.primary.contrast};
     background-color: ${palette.primary.light};
     box-shadow: none;
     padding: .45rem;
