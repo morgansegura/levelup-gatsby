@@ -26,7 +26,7 @@ class Navbar extends React.Component {
             Code <span>Boom</span>
           </Link>
         </div>
-        <div className="nav__header nav__header__left">
+        <div className="nav__header nav__header--left">
           <ul>
             <li>
               <Link to="/articles">Articles</Link>
