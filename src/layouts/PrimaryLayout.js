@@ -1,5 +1,5 @@
 // Libs
-import React, {Fragment} from "react"
+import React from "react"
 import { Normalize } from 'styled-normalize';
 
 // Settings

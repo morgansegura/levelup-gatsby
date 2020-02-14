@@ -7,7 +7,7 @@ import 'typeface-source-sans-pro'
 
 // Styled Components
 import styled from 'styled-components'
-import { device } from '../assets/styled/device'
+// import { device } from '../assets/styled/device'
 import { palette } from '../assets/styled/colors'
 
 const Section = styled.section `

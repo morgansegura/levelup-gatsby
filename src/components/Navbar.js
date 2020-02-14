@@ -67,14 +67,20 @@ const Search = styled.div `
     fill: ${palette.primary.contrast};
     width: 25px;
     height: 25px;
+    @media ${device.mobile} {
+      margin-right: inherit;
+    }
+    @media ${device.tablet} {
+      margin-right: .5rem;
+    }      
   }
 
   input {
-    border: 1px solid ${palette.primary.contrast};
-    background-color: ${palette.primary.light};
+    border: 2px solid ${palette.primary.light};
+    background-color: ${palette.gray.light};
     box-shadow: none;
     padding: .45rem;
-    border-radius: 6px;
+    border-radius: 3px;
 
     @media ${device.mobile} {
       display: none;
