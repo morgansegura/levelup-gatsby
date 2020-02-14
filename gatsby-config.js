@@ -2,6 +2,7 @@
  * Configure your Gatsby site with this file.
  *
  * See: https://www.gatsbyjs.org/docs/gatsby-config/
+ * NODE_TLS_REJECT_UNAUTHORIZED=0 gatsby develop --https
  */
 const settings = require('./settings')
 

@@ -1,17 +1,34 @@
 import React from "react"
 import { graphql } from "gatsby"
 import PrimaryLayout from "../layouts/PrimaryLayout"
-import PostListItem from "../components/PostListItem"
+
+// Fonts
+import 'typeface-source-sans-pro'
+
+// Styled Components
+import styled from 'styled-components'
+import { device } from '../assets/styled/device'
+import { palette } from '../assets/styled/colors'
+
+const Section = styled.section `
+
+  h2 {
+    padding-top: 1rem;
+    padding-bottom: 2rem;
+    color: ${palette.gray.dark};
+    font-weight: 500;
+    font-family: 'Source Sans Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  }
+`
 
 export default ({ data }) => {
   const blogContent = data.allWordpressPost.edges
   return (
     <PrimaryLayout>
-      <div className="container mtb-3">
-
+      <Section>
         {/* Articles */
         blogContent && (
-          <div className="blog-roll">
+          <div>
             <h2>Articles</h2>
 
             {blogContent.map(({ node: post }, index) => (
@@ -36,7 +53,7 @@ export default ({ data }) => {
               ))}
           </div>
         )}
-      </div>
+      </Section>
     </PrimaryLayout>
   )
 }

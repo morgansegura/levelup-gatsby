@@ -4,6 +4,7 @@ import Footer from "../components/Footer"
 import SEO from "../components/SEO"
 import * as settings from "../../settings"
 
+
 const DocumentationLayout = props => (
   <div className="wrapper">
       <SEO data={settings} />

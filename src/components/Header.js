@@ -1,26 +1,16 @@
+// Libs
 import React from "react"
-import Navbar from "./Navbar"
-import { graphql, StaticQuery } from "gatsby"
+
+// Styled Components
+import styled from 'styled-components'
+import { palette } from '../assets/styled/colors'
+
+const Header = styled.header`
+  background-color: ${palette.primary.main};
+`
 
 export default props => (
-  <StaticQuery
-    query={graphql`
-      query HeaderQuery {
-        allWordpressPost {
-          edges {
-            node {
-              id
-              slug
-              title
-            }
-          }
-        }
-      }
-    `}
-    render={(data, count) => (
-      <header className={`${props.classes}`}>
-        <Navbar data={data} count={count} />
-      </header>
-    )}
-  />
+  <Header>
+    {props.children} 
+  </Header>
 )
